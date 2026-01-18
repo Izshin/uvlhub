@@ -87,6 +87,17 @@ git tag v1.0.0
 git push origin v1.0.0
 ```
 
+### Deshacer Cambios
+```bash
+# RESET - Mueve el puntero, reescribe historia (usar ANTES de push)
+git reset --soft HEAD~1    # Deshace commit, mantiene cambios en stage
+git reset --hard HEAD~1    # Deshace commit y BORRA cambios
+git push --force           # Fuerza actualización del remoto (cuidado!)
+
+# REVERT - Crea nuevo commit que deshace cambios (usar DESPUÉS de push)
+git revert <hash>          # Deshace un commit específico de forma segura
+```
+
 ---
 
 ## ⚡ Testing
