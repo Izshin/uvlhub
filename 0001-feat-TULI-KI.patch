@@ -1,0 +1,28 @@
+From 7d20b467d3cb2426a8eba6b2f85ec8954e397a99 Mon Sep 17 00:00:00 2001
+From: ivaferlim <ivaferlijob@gmail.com>
+Date: Sun, 18 Jan 2026 19:52:32 +0100
+Subject: [PATCH] =?UTF-8?q?feat:=20TULI=C2=A1=C2=A1KI?=
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+---
+ Huevada1 | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+diff --git a/Huevada1 b/Huevada1
+index d5f309c..5a4cfcc 100644
+--- a/Huevada1
++++ b/Huevada1
+@@ -1,2 +1,5 @@
+ Tenemos 
+-Nada
+\ No newline at end of file
++Nada
++
++
++MIRAMIHUEVO23.es
+\ No newline at end of file
+-- 
+2.43.0
+
