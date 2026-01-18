@@ -65,6 +65,52 @@ git push origin v1.0.0
 
 ---
 
+## 🔀 Práctica 3: Git Avanzado
+
+### Cherry-pick
+```bash
+git cherry-pick <hash>     # Trae un commit específico de otra rama
+```
+
+### Stash (Guardar cambios temporalmente)
+```bash
+git stash                  # Guarda cambios sin commit
+git stash -u               # Incluye archivos untracked
+git stash list             # Ver pila de stashes
+git stash apply            # Aplica último stash (lo mantiene en pila)
+git stash pop              # Aplica y borra de la pila
+git stash drop             # Borra último stash
+```
+
+### Patches
+```bash
+# Método 1: git diff + apply (sin metadatos)
+git diff > fix.patch              # Exporta cambios sin commit
+git apply --stat fix.patch        # Ver qué hace el parche
+git apply fix.patch               # Aplica cambios (NO commitea)
+
+# Método 2: git format-patch + am (con metadatos: autor, fecha, mensaje)
+git format-patch -1 HEAD          # Exporta último commit completo
+git format-patch -2 HEAD          # Exporta últimos 2 commits
+git am 0001-nombre.patch          # Aplica Y commitea automáticamente
+```
+
+### Conflictos
+```bash
+git pull --no-rebase origin rama  # Fusión sin rebase
+# Editar archivos con conflicto (entre <<<< y >>>>)
+git add archivo.txt
+git commit -m "fix: Fix conflicts"
+```
+
+### Staging Selectivo
+```bash
+git add -p archivo.txt     # Añade por partes (hunks)
+# y = sí, n = no, s = split, e = edit manual
+```
+
+---
+
 ## 🎯 Git Básico
 
 ```bash
