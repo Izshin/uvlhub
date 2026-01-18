@@ -13,7 +13,6 @@ class RosemaryCLI(click.Group):
         return rv
 
 
-
 @click.group(cls=RosemaryCLI)
 def cli():
     """A CLI tool to help with project development."""
