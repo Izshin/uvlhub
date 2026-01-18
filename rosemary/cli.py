@@ -1,6 +1,6 @@
 import importlib
 import os
-
+import sys
 import click
 
 
@@ -11,7 +11,6 @@ class RosemaryCLI(click.Group):
             click.echo(f"No such command '{cmd_name}'.")
             click.echo("Try 'rosemary --help' for a list of available commands.")
         return rv
-
 
 
 @click.group(cls=RosemaryCLI)
