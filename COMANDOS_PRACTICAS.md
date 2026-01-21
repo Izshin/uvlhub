@@ -146,7 +146,47 @@ git revert <hash>          # Deshace un commit específico de forma segura
 
 ---
 
-## ⚡ Testing
+## 🧪 Práctica 4: Testing Avanzado
+
+### Tests Unitarios (models/lógica)
+```bash
+pytest tests/test_unit.py -v
+```
+
+### Tests de Integración (API/endpoints)
+```bash
+pytest tests/test_integration.py -v
+```
+
+### Tests de Interfaz (Selenium)
+```bash
+# Instalar Chrome/Brave en WSL
+sudo apt install chromium-browser -y
+
+# Ejecutar tests de UI
+pytest -s tests/test_interface.py
+```
+
+### Pruebas de Carga (Locust)
+```bash
+# Iniciar servidor de pruebas
+locust -f locustfile.py
+
+# Acceder a interfaz web
+# http://localhost:8089
+# Host: http://localhost:5000
+```
+
+### Coverage Completo
+```bash
+coverage run -m pytest tests/
+coverage report
+coverage html  # Genera reporte en htmlcov/
+```
+
+---
+
+## ⚡ Testing General
 
 ```bash
 pytest
